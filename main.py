@@ -1,4 +1,9 @@
 def numarprim(x):
+    """
+    Determina daca un numar este prim
+    :param x: numer intreg
+    :return: daca numarul este prim sau nu
+    """
     if x<2:
         return False
     else:
@@ -9,12 +14,22 @@ def numarprim(x):
     return True
 
 def sumnr(list):
+    """
+    Determina suma numerelor
+    :param list: numere intregi
+    :return: suma numerelor
+    """
     s=0
     for i in list:
         s=s+int(i)
     return s
 
 def get_longest_sum_is_prime(list):
+    """
+    Determina cea mai lunga secventa in care suma numerelor este numar prim
+    :param list: numere intregi
+    :return:secventa maxima in care suma numerelor este numar prim
+    """
     subsec=[]
     for i in range(len(list)):
         for j in range(i,len(list)):
@@ -26,6 +41,11 @@ def get_longest_sum_is_prime(list):
 
 
 def nrcifre(n):
+    """
+    Determina numarul de cifre
+    :param n: numar intreg
+    :return: numarul de cifre
+    """
     c=int(n)
 
     t=0
@@ -35,12 +55,22 @@ def nrcifre(n):
     return t
 
 def numarcifredesc(list):
+    """
+    Determina daca numarul de cifre ale numerelor se afla in ordine descrescatoare
+    :param list: numere intregi
+    :return: daca numarul de cifre ale numerelor se afla in ordine descrescatoare
+    """
     for i in range(len(list)-1):
         if nrcifre(list[i])< nrcifre(list[i+1]):
             return False
     return True
 
 def get_longest_digit_count_desc(list):
+    """
+    Determina cea mai lunga secventa in care numarul de cifre este in ordine descrescatoare
+    :param list: numere intregi
+    :return:secventa maxima in care nuarul de cifre este in ordine descrescatoare
+    """
     secmax=[]
     for i in range(len(list)):
         for j in range(i,len(list)):
@@ -88,7 +118,7 @@ def main():
             list = []
             list=citire()
 
-            print("1.Determinati cea mai lunga secventa in care suma numerelor este numar prim")
+            print("1.Determinati cea mai lunga secventa in care suma numerelor este numar prim.")
             print("2.Determinati cea mai lunga secventa in care numarul de cifre este in ordine descrescatoare.")
 
             optiune2=input("Dati optiune: ")
