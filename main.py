@@ -91,6 +91,11 @@ def numerepare(list):
 
 
 def get_longest_all_even(list):
+    """
+    Determina cea mai lunga secventa de numere pare
+    :param list: numere intregi
+    :return: cea mai lunga lista de numere pare
+    """
     subsec = []
     for i in range(len(list)):
         for j in range(i, len(list)):
