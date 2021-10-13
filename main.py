@@ -106,21 +106,21 @@ def get_longest_all_even(list):
 
 
 def test_get_longest_sum_is_prime():
-    assert (get_longest_sum_is_prime(["4", "2", "1", "3"]) == ["4", "2", "1"])
-    assert (get_longest_sum_is_prime(["1", "2"]) == ["1", "2"])
-    assert (get_longest_sum_is_prime(["1", "2", "3", "4", "5", "6"]) == ["1", "2"])
+    assert (get_longest_sum_is_prime([4, 2, 1, 3]) == [4, 2, 1])
+    assert (get_longest_sum_is_prime([1, 2]) == [1, 2])
+    assert (get_longest_sum_is_prime([1, 2, 3, 4, 5, 6]) == [1, 2])
 
 
 def test_get_longest_digit_count_desc():
-    assert (get_longest_digit_count_desc(["1234", "123", "1", "1234"]) == ["1234", "123", "1"])
-    assert (get_longest_digit_count_desc(["1234", "12"]) == ["1234", "12"])
-    assert (get_longest_digit_count_desc(["1234", "1", "123", "12", "1", "123412"]) == ["123", "12", "1"])
+    assert (get_longest_digit_count_desc([1234, 123, 1, 1234]) == [1234, 123, 1])
+    assert (get_longest_digit_count_desc([1234, 12]) == [1234, 12])
+    assert (get_longest_digit_count_desc([1234, 1, 123, 12, 1, 123412]) == [123, 12, 1])
 
 
 def test_get_longest_all_even():
-    assert (get_longest_all_even(["1","3","5"])==[])
-    assert (get_longest_all_even(["1", "2", "3", "4", "8", "6", "5", "6"]) == ["4", "8", "6"])
-    assert (get_longest_all_even(["1","2","3","4","5"])==["2"])
+    assert (get_longest_all_even([1,3,5])==[])
+    assert (get_longest_all_even([1, 2, 3, 4, 8, 6, 5, 6]) == [4, 8, 6])
+    assert (get_longest_all_even([1,2,3,4,5])==[2])
 
 
 def citire():
@@ -135,9 +135,9 @@ def citire():
 def main():
     while True:
 
-        print(test_get_longest_sum_is_prime())
-        print(test_get_longest_digit_count_desc())
-        print(test_get_longest_all_even())
+        test_get_longest_sum_is_prime()
+        test_get_longest_digit_count_desc()
+        test_get_longest_all_even()
 
         print("1.Cititi numerele: ")
         print("x.Iesire")
